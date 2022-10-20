@@ -74,8 +74,10 @@
               <tr>
                 <td class="col-2"><?php echo h($record['date']); ?></td>
                 <td class="col-3"><?php echo h($record['title']); ?></td>
-                <td class="col-2"><?php h($record['type']) == 0 ? h($record['amount']): ''; ?></td>
-                <td class="col-2"><?php h($record['type']) == 1 ? h($record['amount']): ''; ?></td>
+                <!-- <td class="col-2"><?php //income($record); ?></td> -->
+                <td class="col-2"><?php echo h($record['type']) == 0 ? h($record['amount']): ''; ?></td>
+                <!-- <td class="col-2"><?php //payment($record); ?></td> -->
+                <td class="col-2"><?php echo h($record['type']) == 1 ? h($record['amount']): ''; ?></td>
                 <td class="col-3">
                   <a href="./editForm.php" class="btn btn-success text-light">編集</a>
                   <a href="./delete.php" class="btn btn-danger text-light">削除</a>
