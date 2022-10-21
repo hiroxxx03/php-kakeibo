@@ -42,6 +42,8 @@
     </header>
 
     <form class="m-5" action="./update.php" method="POST">
+      <input type="hidden" name="id" value="<?php echo $id ?>">
+
       <p class="alert alert-success" role="alert">編集フォーム</p>
       <div class="form-group">
         <label for="date">日付</label>
@@ -61,7 +63,7 @@
           <label class="form-check-label" for="income">収入</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="type" id="spending" value="0"<?= h($record['type']) == 1 ? 'checked' : ''; ?>>
+          <input class="form-check-input" type="radio" name="type" id="spending" value="1"<?= h($record['type']) == 1 ? 'checked' : ''; ?>>
           <label class="form-check-label" for="spending">支出</label>
         </div>
       </div>
